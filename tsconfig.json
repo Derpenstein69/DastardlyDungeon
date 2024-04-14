@@ -1,17 +1,17 @@
 {
   "compilerOptions": {
     "types": [
-      "@league-of-foundry-developers/foundry-vtt-types",
+      "@league-of-foundry-developers/foundry-vtt-types"
     ],
     "target": "ESNext",
     "useDefineForClassFields": true,
-    "module": "ESNext",
+    "module": "ES2022",
     "lib": [
       "ESNext",
       "DOM"
     ],
     "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "Node",
+    "moduleResolution": "Bundler",
     "strict": true,
     "sourceMap": true,
     "resolveJsonModule": true,
@@ -23,7 +23,8 @@
     "noImplicitReturns": true,
     "noImplicitOverride": true,
     "noImplicitAny": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "strictNullChecks": true
   },
   "include": [
     "src"
