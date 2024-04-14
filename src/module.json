@@ -1,17 +1,60 @@
 {
-  "$schema": "https://json.schemastore.org/foundryvtt-manifest.json",
-  "id": "foundry-module-ts",
-  "title": "Typescript Template Module",
-  "description": "A template module using Typescript. You should change name, title, and description in module.json.",
-  "version": "1.0.0",
-  "packs": [],
-  "system": [],
+  "id": "dastardly-dungeon",
+  "title": "Dastardly Dungeon",
+  "description": "Dastardly Dungeon",
+  "version": "#{VERSION}#",
+  "socket": true,
+  "url": "https://dastardlydungeon.app",
+  "manifest": "#{MANIFEST}#",
+  "download": "#{DOWNLOAD}#",
+  "license": "LICENSE",
+  "system": ["dnd5e"],
+  "packFolders": [
+    {
+      "name": "Dastardly Dungeon",
+      "sorting": "a",
+      "folders": [
+        {
+          "name": "Dastardly Dungeon Macros",
+          "sorting": "a",
+          "packs": ["dastardly-dungeon-macros"]
+        },
+        {
+          "name": "Dastardly Dungeon Journal Entries",
+          "sorting": "a",
+          "packs": ["dastardly-dungeon-journal-entries"]
+        }
+      ]
+    }
+  ],
+  "packs": [
+    {
+      "name": "dastardly-dungeon-macros",
+      "label": "Dastardly Dungeon Macros",
+      "path": "packs/dastardly-dungeon-macros.db",
+      "type": "Macro",
+      "system": ["dnd5e"],
+      "ownership": {
+        "PLAYER": "OBSERVER"
+      }
+    },
+    {
+      "name": "dastardly-dungeon-journal-entries",
+      "label": "Dastardly Dungeon Journal Entries",
+      "path": "packs/dastardly-dungeon-journal-entries.db",
+      "type": "JournalEntry",
+      "system": ["dnd5e"],
+      "ownership": {
+        "PLAYER": "OBSERVER"
+      }
+    }
+  ],
   "dependencies": [],
   "scripts": [],
   "compatibility": {
-    "minimum": "9",
-    "verified": "10",
-    "maximum": "10"
+    "minimum": "11",
+    "verified": "11",
+    "maximum": "11"
   },
   "languages": [
     {
@@ -20,6 +63,10 @@
       "path": "languages/en.json"
     }
   ],
-  "styles": ["style.css"],
-  "esmodules": ["scripts/module.js"]
+  "authors": {
+    "name": "Derpenstein69",
+    "discord": "Derpenstein69"
+  },
+  "styles": ["dastardly-dungeon.scss"],
+  "esmodules": ["scripts/dastardly-dungeon.ts"]
 }
