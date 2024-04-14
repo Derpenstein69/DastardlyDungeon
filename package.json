@@ -1,7 +1,7 @@
 {
-  "name": "foundry-module-ts",
+  "name": "dastardly-dungeon",
   "version": "1.0.0",
-  "description": "A template project for FoundryVTT modules using Typescript",
+  "description": "Dastardly Dungeon",
   "license": "MIT",
   "private": true,
   "scripts": {
